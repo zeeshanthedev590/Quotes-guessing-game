@@ -69,14 +69,19 @@ form.addEventListener("submit", function (event) {
       const correctAnswer = response[random].Author.toLowerCase();
       answer.style.display = "inline";
       const distance = levenshteinDistance(userAnswer, correctAnswer);
-      if (distance <= 9) {
+      if (distance <= 3) {
         // Adjust the threshold as per your requirements
-        answer.innerHTML = `Correct answer! The answer indeed is: ${correctAnswer}`;
+        answer.innerHTML = `✅Correct answer! The answer indeed is : ${correctAnswer}`;
+        answer.style.fontWeight = "bold";
         newQuoteBtn.style.display = "inline";
         score++;
         scoreDisplay.textContent = score.toString();
       } else {
-        answer.innerHTML = `Incorrect answer! The answer was: ${correctAnswer}`;
+        answer.innerHTML = `❌Incorrect answer! , The answer was : ${correctAnswer}`;
+        answer.style.fontWeight = "bold";
+
+        score = 0;
+        scoreDisplay.textContent = score.toString();
         newQuoteBtn.style.display = "inline";
       }
       userInput.disabled = true;
