@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            font-family: 'Roboto', sans-serif;
+        }
+
+        main {
+            text-align: center;
+            max-width: 500px;
+            padding: 20px;
+        }
+
+        #quote {
+            font-family: 'Times New Roman', serif;
+            font-style: italic;
+
+        }
+    </style>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body style="background-image: url(./img/Gotham.jpg); color: white;" class="text-center">
+    <main class=' max-w-screen m-auto'>
+        <div class="flex-col mt-10">
+
+            <span id="scoreDisplay" class="text-6xl"></span>
+            <p>
+                Points
+            </p>
+        </div>
+        <p>Who said this</p>
+        <h1 id="quote" class="m-10 text-2xl sm:text-3xl"></h1>
+        <h1 id="answer" class="m-10"></h1>
+        <form id="myForm" class="m-10">
+            <input type="text" class="text-black" placeholder="Enter the author's name" id="userInput" />
+            <button type="submit">Submit</button>
+        </form>
+        <button id="newQuoteBtn" style="display: none;">New Quote</button>
+    </main>
+</body>
+
+<script src="./index.js"></script>
+
+</html>
