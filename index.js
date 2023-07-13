@@ -42,7 +42,7 @@ function levenshteinDistance(a, b) {
 }
 
 function fetchQuote() {
-  fetch("./data.json")
+  fetch("./quotes.json")
     .then((response) => response.json())
     .then((response) => {
       random = Math.floor(Math.random() * 100);
@@ -63,7 +63,7 @@ form.addEventListener("submit", function (event) {
   event.preventDefault();
 
   const userAnswer = userInput.value.toLowerCase();
-  fetch("./data.json")
+  fetch("./quotes.json")
     .then((response) => response.json())
     .then((response) => {
       const correctAnswer = response[random].Author.toLowerCase();
